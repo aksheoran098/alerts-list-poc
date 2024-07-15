@@ -1,0 +1,53 @@
+{
+  "loading": false,
+  "data": {
+    "actor": {
+      "__typename": "Actor",
+      "account": {
+        "__typename": "Account",
+        "nrql": null,
+        "id": 2781667
+      }
+    }
+  },
+  "error": {
+    "name": "ApolloError",
+    "graphQLErrors": [
+      {
+        "extensions": {
+          "errorClass": "TIMEOUT",
+          "errorCode": "NRDB:1109"
+        },
+        "locations": [
+          {
+            "column": 28,
+            "line": 1
+          }
+        ],
+        "message": "NRDB query duration exceeded the set timeout",
+        "path": ["actor", "account", "nrql"]
+      }
+    ],
+    "protocolErrors": [],
+    "clientErrors": [],
+    "networkError": null,
+    "message": "NRDB query duration exceeded the set timeout"
+  },
+  "fetchMore": null,
+  "errors": [
+    {
+      "extensions": {
+        "errorClass": "TIMEOUT",
+        "errorCode": "NRDB:1109"
+      },
+      "locations": [
+        {
+          "column": 28,
+          "line": 1
+        }
+      ],
+      "message": "NRDB query duration exceeded the set timeout",
+      "path": ["actor", "account", "nrql"]
+    }
+  ]
+}

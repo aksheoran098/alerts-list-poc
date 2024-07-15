@@ -1,0 +1,5 @@
+{
+  "accountId": "2781667",
+  "allAlerts": "FROM NrAiIncident SELECT timestamp, title, priority, incidentLink WHERE entity.name = '210135-Partner Ready Portal (PRP)-Production' AND event = 'open' SINCE 1 DAYS AGO ",
+  "uniqueAlerts": "FROM NrAiIncident SELECT uniques(title) WHERE entity.name = '210135-Partner Ready Portal (PRP)-Production' AND event = 'open' SINCE 1 DAYS AGO "
+}

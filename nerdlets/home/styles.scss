@@ -1,0 +1,102 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+a {
+  text-decoration: none !important;
+}
+a[target="_blank"]::after {
+  content: none !important;
+  background-image: none !important;
+  display: none !important;
+}
+
+ul {
+  list-style-type: none;
+  & li {
+    margin: 10px;
+    font-size: 14px;
+  }
+}
+.alertTitle {
+  margin-bottom: 5px;
+}
+.alertDetails {
+  text-transform: uppercase;
+  margin-top: 2px;
+  span {
+    display: inline-block;
+    min-width: fit-content;
+    margin-right: 40px;
+  }
+  .critical,
+  .warning {
+    // text-transform: uppercase;
+    font-weight: 500;
+  }
+  .warning {
+    color: rgb(255, 200, 0);
+  }
+  .critical {
+    color: red;
+    margin-right: 44px;
+  }
+}
+.show-more-button {
+  color: blue;
+  cursor: pointer;
+}
+
+// Hexagonal Shape
+
+.main-container {
+  display: flex;
+  --s: 100px;
+  /* size  */
+  --m: 2px;
+  /* margin */
+  --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
+}
+
+.hex-container {
+  font-size: 0;
+  padding-bottom: calc(var(--s) * 0.5);
+
+  box-sizing: content-box;
+  width: auto;
+  margin: 5px;
+  padding: calc(var(--s) * 1.4) px;
+
+  /*disable white space between inline block element */
+}
+
+.hex-container div {
+  width: var(--s);
+  // margin: var(--m);
+  height: calc(var(--s) * 1.1547);
+  display: inline-block;
+  font-size: initial;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  background: red;
+  margin-bottom: calc(var(--m) - var(--s) * 0.2885);
+  /* text-align: center; */
+  /* vertical-align: middle; */
+}
+
+// Tooltip
+.tooltip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+  background-color: transparent; // No background color
+}
+
+.custom-tooltip {
+  border: 1px solid black;
+  background-color: rgb(240, 255, 240) !important;
+  // color: #000 !important;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  // max-width: 90vw;
+}
