@@ -9,7 +9,6 @@ import appData from "../../../app_data.json";
 import { NerdGraphQuery } from "nr1";
 
 const ParentCard = () => {
-  // alert("parent rerendered");
   const [uniqueAlerts, setUniqueAlerts] = useState(undefined);
   const [allAlerts, setAllAlerts] = useState("");
   const [selectedAlert, setSelectedAlert] = useState("");
@@ -27,7 +26,7 @@ const ParentCard = () => {
       const response = await NerdGraphQuery.query({ query });
       return response;
     } catch (error) {
-      alert(error);
+      console.log(error);
     }
   };
 
@@ -46,7 +45,7 @@ const ParentCard = () => {
     }`);
       return response;
     } catch (error) {
-      alert(error);
+      console.log(error);
     }
   };
 
@@ -69,13 +68,13 @@ const ParentCard = () => {
           .members
       );
     } catch (e) {
-      alert(e);
+      console.log(e);
     }
   };
 
   return (
     <div style={{ maxWidth: "100%" }}>
-      <div style={{ maxWidth: "95%", margin: "auto" }}>
+      <div style={{ margin: "10px" }}>
         <div>
           <Row>
             <Col md={{ offset: 7 }}>

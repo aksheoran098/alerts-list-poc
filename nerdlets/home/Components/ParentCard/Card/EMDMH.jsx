@@ -54,9 +54,9 @@ const EMDMH = ({ allAlerts, selectedAlert }) => {
   const initialView = () => [
     printItem(displayAlerts[0], 0),
     printItem(displayAlerts[1], 1),
-    <li>* * * * *</li>,
-    <li>* * * * *</li>,
-    <li>* * * * *</li>,
+    printItem(displayAlerts[2], 2),
+    printItem(displayAlerts[3], 3),
+
     <li className="show-more-button" onClick={showMoreHandle}>
       Show more
     </li>,
@@ -76,7 +76,7 @@ const EMDMH = ({ allAlerts, selectedAlert }) => {
           <li>Loading...</li>
         ) : displayAlerts.length == 0 ? (
           <li>No such alert</li>
-        ) : !selectedAlert && !showMore && displayAlerts.length > 3 ? (
+        ) : !selectedAlert && !showMore && displayAlerts.length > 4 ? (
           initialView()
         ) : (
           displayAlerts.map((item, index) => printItem(item, index))
@@ -84,7 +84,7 @@ const EMDMH = ({ allAlerts, selectedAlert }) => {
         {allAlerts &&
           !selectedAlert &&
           showMore &&
-          displayAlerts.length > 3 && (
+          displayAlerts.length > 4 && (
             <li onClick={() => setShowMore(false)} className="show-more-button">
               Show less
             </li>
